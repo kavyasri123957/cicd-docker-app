@@ -15,6 +15,12 @@ pipeline {
             }
         }
 
+        stage('Docker Build') {
+            steps {
+                bat 'docker build -t cicd-app .'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying Application'
