@@ -16,10 +16,10 @@ pipeline {
         }
 
         stage('Docker Build') {
-            steps {
-                bat 'docker build -t cicd-app .'
-            }
-        }
+    steps {
+        sh 'docker build -t cicd-app .'
+    }
+}
 
         stage('Deploy') {
             steps {
